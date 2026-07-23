@@ -392,7 +392,7 @@ footer small{color:#6f6c5f;font-size:12px}
       <a class="tlink" href="preise.html">Preise</a></div>
     </article>
     <article class="card reveal">
-      <div class="pic"><img class="ph" src="images/wimpernverlaengerung-nahaufnahme.jpg" alt="Wimpernverlängerung in Leipheim – Nahaufnahme dichter Wimpern" width="1200" height="1600" loading="lazy"></div>
+      <div class="pic"><img class="ph" src="images/wimpernverlaengerung-augenblick_edited.jpg" alt="Wimpernverlängerung in Leipheim – Nahaufnahme dichter Wimpern" width="1200" height="1600" loading="lazy"></div>
       <div class="card-body"><h3>Wimpern</h3><div class="from">ab 199 €</div>
       <p>Aufwachen und strahlen – ohne Mascara. Abgestimmt auf Ihre Augenform.</p>
       <a class="tlink" href="#buchung">Beratung anfragen</a></div>
@@ -504,17 +504,18 @@ footer small{color:#6f6c5f;font-size:12px}
 // ---------- Galerie-Karussell ----------
 const PICS=[
  {src:"images/nageldesign-babyboomer-goldfolie.jpg",alt:"Babyboomer-Gelnägel mit Goldfolie – Nageldesign von Kerstin Kreis"},
- {src:"images/gelnaegel-milky-white-goldfolie.jpg",alt:"Milky-White-Gelnägel mit Goldfolie und schwarzen Akzenten"},
- {src:"images/nailart-french-folie-nahaufnahme.jpg",alt:"French-Nailart mit bunter Folie in Nahaufnahme"},
+ {src:"images/wimpernverlaengerung-augenblick.jpg",alt:"Wimpernverlängerung in Nahaufnahme"},
  {src:"images/gelnaegel-rot-ballerina-form.jpg",alt:"Rote Gelnägel in Ballerina-Form"},
  {src:"images/gelnaegel-perlmutt-mandelform.jpg",alt:"Perlmutt-Gelnägel in Mandelform"},
+ {src:"images/wimpern-vorher-nachher.jpg",alt:"Wimpern im Vorher-Nachher-Vergleich"},
+ {src:"images/nailart-french-folie-nahaufnahme.jpg",alt:"French-Nailart mit bunter Folie in Nahaufnahme"},
+ {src:"images/gelnaegel-milky-white-goldfolie.jpg",alt:"Milky-White-Gelnägel mit Goldfolie und schwarzen Akzenten"},
  {src:"images/gelnaegel-rot-gold-nailart.jpg",alt:"Rote Gelnägel mit goldener Nailart"},
  {src:"images/gelnaegel-koralle-nailart-punkte.jpg",alt:"Korallenrote Gelnägel mit Punkte-Nailart"},
  {src:"images/gelnaegel-hellblau-schmetterling-nailart.jpg",alt:"Hellblaue Gelnägel mit Schmetterling-Nailart"},
  {src:"images/naegel-schwarz-glitzer-nailart.jpg",alt:"Schwarze Nägel mit Glitzer und Sternchen-Nailart"},
- {src:"images/naturnaegel-rosa-schimmer.jpg",alt:"Natürlich gepflegte Nägel mit rosa Schimmer"},
- {src:"images/wimpernverlaengerung-nahaufnahme.jpg",alt:"Wimpernverlängerung in Nahaufnahme"},
- {src:"images/wimpern-vorher-nachher.jpg",alt:"Wimpern im Vorher-Nachher-Vergleich"}];
+ {src:"images/naturnaegel-rosa-schimmer.jpg",alt:"Natürlich gepflegte Nägel mit rosa Schimmer"}
+];
 const caro=document.getElementById("caro"),lbList=PICS.map(p=>p.src);
 PICS.forEach((p,n)=>{const f=document.createElement("figure");
   f.innerHTML=`<img class="ph" src="${p.src}" alt="${p.alt}" loading="lazy">`;
