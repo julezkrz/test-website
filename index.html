@@ -51,7 +51,11 @@ h2{font-size:clamp(30px,4.4vw,50px);margin:16px 0 16px}
 .brand small{font:500 9.5px/1.4 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
 /* Nav */
 .nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px min(4vw,48px);transition:.5s}
-.nav.solid{background:rgba(11,11,13,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding-block:11px}
+/* Blur liegt auf einem Pseudo-Element: backdrop-filter direkt auf .nav würde das
+   position:fixed-Mobilmenü in die Navbar einsperren (containing block) */
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(11,11,13,.88);backdrop-filter:blur(16px);opacity:0;transition:.5s}
+.nav.solid::before{opacity:1}
+.nav.solid{border-bottom:1px solid var(--line);padding-block:11px}
 .nav-links{display:flex;gap:26px;align-items:center;list-style:none}
 .nav-links a{font:500 12.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--body);transition:.3s}
 .nav-links a:not(.btn):hover{color:var(--gold2)}
@@ -63,7 +67,7 @@ body.menu-open .burger span:nth-child(1){top:10px;transform:rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
 body.menu-open .burger span:nth-child(3){top:10px;transform:rotate(-45deg)}
 @media(max-width:980px){
-.nav-links{position:fixed;inset:0;background:rgba(11,11,13,.97);flex-direction:column;justify-content:center;gap:26px;opacity:0;visibility:hidden;transition:.5s var(--ease);z-index:60}
+.nav-links{position:fixed;inset:0;background:#0b0b0d;flex-direction:column;justify-content:center;gap:26px;opacity:0;visibility:hidden;transition:.5s var(--ease);z-index:60}
 .nav-links a:not(.btn){font:700 22px var(--disp);letter-spacing:.1em}
 body.menu-open .nav-links{opacity:1;visibility:visible}
 .burger{display:block}.nav>.btn{display:none}}
@@ -116,7 +120,10 @@ background:radial-gradient(55% 70% at 18% 12%,rgba(213,171,95,.16),transparent 6
 .rail a{width:42px;height:42px;border-radius:50%;border:1px solid var(--line2);background:rgba(11,11,13,.55);backdrop-filter:blur(8px);display:grid;place-items:center;color:var(--gold2);transition:.3s var(--ease)}
 .rail a:hover{background:rgba(213,171,95,.16);border-color:var(--gold);transform:translateX(3px)}
 .rail svg{width:18px;height:18px}
-@media(max-width:900px){.rail{display:none}}
+@media(max-width:900px){
+.rail{left:10px;gap:8px}
+.rail a{width:36px;height:36px;background:rgba(11,11,13,.7)}
+.rail svg{width:15px;height:15px}}
 section{padding:105px 0;position:relative}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:center}
 @media(max-width:860px){.split{grid-template-columns:1fr}}
