@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nagelstudio Leipheim – Nägel, Wimpern & Fußpflege | Kerstin Kreis Beauty</title>
+<meta name="description" content="Ihr Nagelstudio in Leipheim bei Günzburg: Nageldesign, Wimpernverlängerung (ab 199 €) und kosmetische Fußpflege von der Nailover-Trainerin – gut erreichbar aus Ulm & Umgebung. Jetzt online Termin sichern.">
+<link rel="preconnect" href="https://static.wixstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--panel:#141417;--panel2:#1a1a1f;--line:rgba(233,200,126,.16);--line2:rgba(233,200,126,.34);
+--gold:#d5ab5f;--gold2:#f2d998;--ivory:#f6f3ec;--body:#c9c4b8;--muted:#94907f;
+--disp:"Syne",sans-serif;--sans:"Outfit",sans-serif;--r:22px;--ease:cubic-bezier(.22,.8,.24,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--body);font:400 16.5px/1.75 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:#181206}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.06;color:var(--ivory);letter-spacing:-.01em;text-transform:uppercase}
+h2{font-size:clamp(30px,4.4vw,50px);margin:16px 0 16px}
+.chip{display:inline-flex;align-items:center;gap:9px;font:600 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);border:1px solid var(--line2);border-radius:999px;padding:10px 18px}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:linear-gradient(120deg,var(--gold),var(--gold2));box-shadow:0 0 10px var(--gold)}
+.gold-text{background:linear-gradient(100deg,#b8893f 15%,var(--gold) 35%,#fff3d0 50%,var(--gold) 65%,#b8893f 85%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:-220% center}}
+.gold-text{filter:drop-shadow(0 0 16px rgba(213,171,95,.4))}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.gold-text{background:none;color:var(--gold2)}}
+.sub{color:var(--muted);font-size:clamp(16px,1.8vw,18.5px);max-width:620px}
+/* Fotos veredeln */
+.ph{filter:saturate(1.14) contrast(1.07) brightness(1.02)}
+/* Buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 34px;font:600 12.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border-radius:999px;border:1px solid var(--line2);transition:.4s var(--ease);cursor:pointer;background:none;color:var(--ivory)}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,250,230,.5),transparent);transform:skewX(-22deg)}
+.btn:hover::after{animation:sweep .9s var(--ease)}
+@keyframes sweep{to{left:135%}}
+.btn-gold{background:linear-gradient(120deg,#b8893f,var(--gold) 45%,var(--gold2));color:#1c1305;border:none;animation:glowpulse 3.4s ease-in-out infinite}
+@keyframes glowpulse{0%,100%{box-shadow:0 12px 34px -14px rgba(213,171,95,.65)}50%{box-shadow:0 14px 46px -12px rgba(242,217,152,.95),0 0 28px -4px rgba(213,171,95,.55)}}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 44px -12px rgba(213,171,95,.75)}
+.btn-gold:disabled{opacity:.35;cursor:default;transform:none;box-shadow:none}
+.btn-ghost:hover{background:rgba(233,200,126,.1);border-color:var(--gold)}
+.btn-ghost:disabled{opacity:.35;cursor:default}
+/* Logo */
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:46px;width:auto;flex:none;filter:drop-shadow(0 0 12px rgba(213,171,95,.45))}
+.brand b{font:700 16px/1.1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--ivory);display:block}
+.brand small{font:500 9.5px/1.4 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+/* Nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px min(4vw,48px);transition:.5s}
+.nav.solid{background:rgba(11,11,13,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding-block:11px}
+.nav-links{display:flex;gap:26px;align-items:center;list-style:none}
+.nav-links a{font:500 12.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--body);transition:.3s}
+.nav-links a:not(.btn):hover{color:var(--gold2)}
+.nav .btn{padding:13px 24px}
+.burger{display:none;background:none;border:none;cursor:pointer;z-index:70;width:34px;height:22px;position:relative}
+.burger span{position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:var(--gold);transition:.4s var(--ease)}
+.burger span:nth-child(1){top:0}.burger span:nth-child(2){top:10px}.burger span:nth-child(3){top:20px}
+body.menu-open .burger span:nth-child(1){top:10px;transform:rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){top:10px;transform:rotate(-45deg)}
+@media(max-width:980px){
+.nav-links{position:fixed;inset:0;background:rgba(11,11,13,.97);flex-direction:column;justify-content:center;gap:26px;opacity:0;visibility:hidden;transition:.5s var(--ease);z-index:60}
+.nav-links a:not(.btn){font:700 22px var(--disp);letter-spacing:.1em}
+body.menu-open .nav-links{opacity:1;visibility:visible}
+.burger{display:block}.nav>.btn{display:none}}
+@media(min-width:981px){.nav-links .btn{display:none}}
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+background:radial-gradient(55% 70% at 18% 12%,rgba(213,171,95,.16),transparent 60%),radial-gradient(45% 60% at 88% 85%,rgba(213,171,95,.1),transparent 65%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center;width:min(1180px,92%);margin-inline:auto;padding:130px 0 70px;position:relative;z-index:2}
+.hero h1{font-size:clamp(36px,10vw,86px);font-weight:800;margin:18px 0 14px}
+.hero .sub{margin-bottom:34px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:44px}
+.hero-facts div b{display:block;font:700 17px var(--disp);color:var(--gold2);letter-spacing:.04em}
+.hero-facts div small{font:500 11px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero .chip,.hero h1,.hero .sub,.hero .cta-row,.hero-facts{animation:rise 1.1s var(--ease) both}
+.hero h1{animation-delay:.15s}.hero .sub{animation-delay:.3s}.hero .cta-row{animation-delay:.45s}.hero-facts{animation-delay:.6s}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}}
+/* Hero-Showcase */
+.showcase{position:relative;animation:rise 1.2s var(--ease) both;animation-delay:.35s}
+.frame{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:3/3.4;border:1px solid var(--line2);box-shadow:0 44px 96px -36px rgba(0,0,0,.95),0 0 80px -22px rgba(213,171,95,.5);background:linear-gradient(160deg,#1c1a15,#101013)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(11,11,13,.5));pointer-events:none;z-index:2}
+.slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.3s var(--ease)}
+.slide.on{opacity:1;animation:slowzoom 5.6s var(--ease) forwards}
+@keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.dots button{width:36px;height:3px;border-radius:99px;border:none;background:rgba(233,200,126,.22);cursor:pointer;transition:.4s;padding:0}
+.dots button.on{background:linear-gradient(90deg,var(--gold),var(--gold2));box-shadow:0 0 14px rgba(213,171,95,.8)}
+.badge{position:absolute;left:18px;bottom:18px;z-index:3;display:inline-flex;align-items:center;gap:9px;background:rgba(15,14,12,.55);backdrop-filter:blur(12px);border:1px solid var(--line2);border-radius:999px;padding:11px 18px;font:600 12px/1.4 var(--sans);letter-spacing:.08em;color:var(--gold2)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;padding-top:112px}.showcase{max-width:480px}}
+/* Funkeln */
+.sparkles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.sparkles i{position:absolute;bottom:-20px;width:5px;height:5px;border-radius:50%;background:radial-gradient(circle,#ffe9b0 0,var(--gold) 45%,transparent 72%);opacity:0;animation:float linear infinite}
+.sparkles i:nth-child(1){left:10%;animation-duration:14s}
+.sparkles i:nth-child(2){left:30%;width:3px;height:3px;animation-duration:18s;animation-delay:4s}
+.sparkles i:nth-child(3){left:52%;width:7px;height:7px;filter:blur(1px);animation-duration:20s;animation-delay:2s}
+.sparkles i:nth-child(4){left:74%;width:3px;height:3px;animation-duration:15s;animation-delay:7s}
+.sparkles i:nth-child(5){left:90%;animation-duration:17s;animation-delay:5s}
+@keyframes float{0%{transform:translateY(0);opacity:0}8%{opacity:.85}90%{opacity:.4}100%{transform:translateY(-105vh) translateX(4vw);opacity:0}}
+/* Aufschimmernde Wörter */
+.glimmer{border-block:1px solid var(--line);padding:26px 0;background:#0e0e10}
+.glimmer .wrap{display:flex;justify-content:center;align-items:center;gap:16px 24px;flex-wrap:wrap}
+.glimmer span{font:800 clamp(17px,2.4vw,28px)/1 var(--disp);text-transform:uppercase;letter-spacing:.1em;color:rgba(233,200,126,.26);animation:glimmer 10s ease-in-out infinite}
+.glimmer i{color:rgba(233,200,126,.3);font-style:normal;font-size:13px;animation:glimdot 5s ease-in-out infinite}
+@keyframes glimmer{0%,100%{color:rgba(233,200,126,.26);text-shadow:none}7%{color:var(--gold2);text-shadow:0 0 24px rgba(213,171,95,.9),0 0 60px rgba(213,171,95,.4)}15%{color:rgba(233,200,126,.26);text-shadow:none}}
+@keyframes glimdot{50%{color:rgba(233,200,126,.7)}}
+section{padding:105px 0;position:relative}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+/* Reveal & Bilder */
+.reveal{opacity:0;transform:translateY(38px);transition:.9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.pic{border-radius:var(--r);overflow:hidden;position:relative;border:1px solid var(--line2);box-shadow:0 34px 80px -30px rgba(0,0,0,.9),0 0 60px -24px rgba(213,171,95,.3);background:linear-gradient(160deg,#1c1a15,#101013)}
+.pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,11,13,.55));pointer-events:none}
+.pic img{width:100%;height:100%;object-fit:cover;transition:1.2s var(--ease)}
+.reveal .pic img{transform:scale(1.1)}
+.reveal.in .pic img{transform:scale(1)}
+.about-pic{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);aspect-ratio:3/3.4;box-shadow:0 34px 80px -30px rgba(0,0,0,.9),0 0 60px -24px rgba(213,171,95,.3);background:#141417}
+.about-bg{position:absolute;inset:-34px;width:calc(100% + 68px);height:calc(100% + 68px);object-fit:cover;filter:blur(30px) saturate(1.25) brightness(.5)}
+.about-fg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64%;max-width:330px;aspect-ratio:3/3.9;object-fit:cover;border-radius:16px;border:1px solid var(--line2);box-shadow:0 26px 60px -22px rgba(0,0,0,.95),0 0 44px -16px rgba(213,171,95,.45)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}
+.reveal{opacity:1;transform:none}.slide.on{opacity:1}}
+/* Timeline-Chips */
+.mile{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.mile span{font:500 12.5px/1 var(--sans);letter-spacing:.06em;color:var(--body);border:1px solid var(--line2);border-radius:999px;padding:11px 18px;background:rgba(233,200,126,.05)}
+.mile b{color:var(--gold2);font-family:var(--disp);margin-right:6px}
+.usps{display:grid;gap:10px;margin-top:26px}
+.usps span{display:flex;gap:10px;color:var(--body);font-size:15px;line-height:1.6}
+.usps span::before{content:"✓";color:var(--gold);font-weight:600}
+/* Karten */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,var(--panel),#101013);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.5s var(--ease);display:flex;flex-direction:column}
+.card:hover{border-color:var(--line2);transform:translateY(-8px);box-shadow:0 40px 80px -34px rgba(0,0,0,.95),0 0 56px -26px rgba(213,171,95,.4)}
+.card .pic{border:none;border-radius:0;box-shadow:none;aspect-ratio:4/3.9}
+.card:hover .pic img{transform:scale(1.06)}
+.card-body{padding:26px 26px 30px;flex:1;display:flex;flex-direction:column}
+.card h3{font-size:20px;letter-spacing:.04em}
+.card .from{font:600 12px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:6px}
+.card p{color:var(--muted);font-size:14.5px;line-height:1.75;margin:12px 0 18px;flex:1}
+.tlink{font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);display:inline-flex;align-items:center;gap:9px}
+.tlink::after{content:"→";transition:.35s}
+.tlink:hover::after{transform:translateX(6px)}
+/* News */
+.news{text-align:center;padding:0}
+.news .inner{background:linear-gradient(120deg,#231a0b,#2e2210 50%,#231a0b);border:1px solid var(--line2);border-radius:calc(var(--r) + 6px);padding:64px 26px;position:relative;overflow:hidden}
+.news .inner::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 100% at 50% 0,rgba(233,200,126,.16),transparent 70%)}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+.news .inner::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--a),rgba(233,200,126,.12) 0 68%,var(--gold2) 82%,rgba(233,200,126,.12) 96%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 5.5s linear infinite;pointer-events:none}
+@keyframes spin{to{--a:360deg}}
+.news h2{font-size:clamp(26px,3.6vw,40px)}
+.news p{color:var(--body);max-width:560px;margin:8px auto 28px;position:relative}
+/* Preise */
+.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,4vw,50px);margin-top:50px}
+@media(max-width:860px){.price-cols{grid-template-columns:1fr}}
+.price-block{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:32px 30px}
+.price-block h3{font-size:19px;letter-spacing:.06em;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.price-block h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent)}
+.price-row{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid rgba(233,200,126,.09)}
+.price-row:last-child{border-bottom:none}
+.price-row .name{font:500 15px var(--sans);color:var(--body)}
+.price-row .name small{display:block;color:var(--muted);font-size:12.5px;font-weight:400}
+.price-row .dots{flex:1;border-bottom:1px dotted rgba(233,200,126,.4);transform:translateY(-5px)}
+.price-row .val{font:700 16px var(--disp);color:var(--gold2);white-space:nowrap}
+/* Galerie */
+.subnav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:40px 0 6px}
+.subnav button{padding:12px 26px;border:1px solid var(--line2);border-radius:999px;background:none;color:var(--ivory);font:600 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:.35s}
+.subnav button:hover{border-color:var(--gold)}
+.subnav button.active{background:linear-gradient(120deg,#b8893f,var(--gold) 45%,var(--gold2));color:#1c1305;border-color:transparent}
+.masonry{columns:3 290px;column-gap:18px;padding-top:22px}
+.masonry figure{break-inside:avoid;margin:0 0 18px;position:relative;cursor:zoom-in;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#141417;animation:fadein .7s var(--ease);transition:.4s var(--ease)}
+.masonry figure:hover{border-color:var(--line2);box-shadow:0 22px 50px -22px rgba(0,0,0,.9),0 0 44px -20px rgba(213,171,95,.45);transform:translateY(-4px)}
+@keyframes fadein{from{opacity:0;transform:translateY(18px)}}
+.masonry img{width:100%;transition:.7s var(--ease)}
+.masonry figure::after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;font-size:26px;color:var(--gold2);background:rgba(11,11,13,.5);opacity:0;transition:.4s}
+.masonry figure:hover::after{opacity:1}
+.masonry figure:hover img{transform:scale(1.06)}
+/* Galerie-Karussell */
+.caro-wrap{position:relative;margin-top:40px}
+.caro{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-width:none}
+.caro::-webkit-scrollbar{display:none}
+.caro figure{flex:0 0 auto;width:min(240px,62vw);aspect-ratio:3/3.8;border-radius:18px;overflow:hidden;border:1px solid var(--line);scroll-snap-align:center;cursor:zoom-in;transition:.4s var(--ease);background:#141417}
+.caro figure:hover{border-color:var(--line2);transform:translateY(-4px);box-shadow:0 22px 50px -22px rgba(0,0,0,.9),0 0 44px -20px rgba(213,171,95,.45)}
+.caro img{width:100%;height:100%;object-fit:cover;transition:.6s var(--ease)}
+.caro figure:hover img{transform:scale(1.06)}
+.caro-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;border:1px solid var(--line2);background:rgba(11,11,13,.72);backdrop-filter:blur(8px);color:var(--gold2);font-size:19px;cursor:pointer;transition:.3s}
+.caro-btn:hover{background:rgba(213,171,95,.2)}
+.caro-prev{left:-8px}.caro-next{right:-8px}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(8,8,9,.97);display:none;align-items:center;justify-content:center;padding:5vmin}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:16px;border:1px solid var(--line2);animation:rise .5s var(--ease)}
+.lightbox button{position:absolute;background:rgba(11,11,13,.6);border:1px solid var(--line2);border-radius:50%;color:var(--gold2);width:52px;height:52px;font-size:21px;cursor:pointer}
+.lightbox button:hover{background:rgba(213,171,95,.2)}
+.lb-close{top:26px;right:26px}.lb-prev{left:16px;top:50%;transform:translateY(-50%)}.lb-next{right:16px;top:50%;transform:translateY(-50%)}
+/* Zitate */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;position:relative;transition:.4s}
+.quote:hover{border-color:var(--line2)}
+.quote .stars{color:var(--gold);letter-spacing:4px;font-size:13px}
+.quote p{font-size:16.5px;line-height:1.7;margin-top:14px;color:var(--ivory)}
+.quote cite{display:block;margin-top:16px;font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.qcaro{position:relative;max-width:680px;margin:46px auto 0;min-height:200px}
+.qcaro .quote{position:absolute;top:0;left:0;right:0;opacity:0;transform:translateY(14px);transition:.7s var(--ease);pointer-events:none}
+.qcaro .quote.on{opacity:1;transform:none;pointer-events:auto}
+/* Motto */
+.motto{text-align:center;max-width:800px;margin:0 auto 80px}
+.motto blockquote{font:700 clamp(24px,3.6vw,38px)/1.3 var(--disp);text-transform:uppercase;color:var(--ivory);margin-top:8px}
+.motto cite{display:block;margin-top:18px;font:600 11px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+@media(max-width:860px){.courses{grid-template-columns:1fr}}
+/* Buchung */
+.book-grid{max-width:880px;margin:52px auto 0}
+.steps{display:flex;justify-content:center;margin-bottom:40px;flex-wrap:wrap;gap:8px}
+.steps span{font:600 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:10px 18px;border:1px solid var(--line);border-radius:999px}
+.steps span.on{color:var(--gold2);border-color:var(--line2);background:rgba(233,200,126,.06)}
+.svc-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.svc{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:17px 20px;cursor:pointer;transition:.3s;text-align:left;color:var(--ivory)}
+.svc:hover{border-color:var(--gold)}
+.svc.sel{border-color:var(--gold);background:#221b0f;box-shadow:0 0 0 1px var(--gold) inset}
+.svc b{display:block;font:500 15.5px var(--sans)}
+.svc small{color:var(--muted);font-size:13px}
+.svc em{float:right;font:700 14px var(--disp);font-style:normal;color:var(--gold2)}
+.cal{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);padding:26px;margin-top:28px}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.cal-head b{font:700 19px var(--disp);text-transform:uppercase;letter-spacing:.04em;color:var(--ivory)}
+.cal-head button{background:none;border:1px solid var(--line2);border-radius:50%;color:var(--gold2);width:42px;height:42px;font-size:18px;cursor:pointer;transition:.3s}
+.cal-head button:hover:not(:disabled){background:rgba(233,200,126,.1)}
+.cal-head button:disabled{opacity:.3;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}
+.cal-grid .dow{font:600 10px/1 var(--sans);letter-spacing:.16em;color:var(--muted);padding:9px 0}
+.day{aspect-ratio:1;border:1px solid transparent;border-radius:12px;background:none;color:var(--ivory);font:500 15px var(--sans);cursor:pointer;transition:.25s}
+.day:hover:not(:disabled){border-color:var(--gold)}
+.day:disabled{color:#4d4a3f;cursor:default}
+.day.sel{background:linear-gradient(120deg,#b8893f,var(--gold) 45%,var(--gold2));color:#1c1305}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:9px;margin-top:24px}
+.slot{padding:13px 0;border:1px solid var(--line2);border-radius:999px;background:none;color:var(--ivory);font:500 14.5px var(--sans);cursor:pointer;transition:.25s}
+.slot:hover{border-color:var(--gold)}
+.slot.sel{background:linear-gradient(120deg,#b8893f,var(--gold) 45%,var(--gold2));color:#1c1305;border-color:transparent}
+.field{margin-top:20px}
+.field label{display:block;font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.field input,.field textarea{width:100%;background:var(--panel);border:1px solid var(--line2);border-radius:14px;color:var(--ivory);padding:15px 18px;font:400 16px var(--sans);outline:none;transition:.3s}
+.field input:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 26px -12px rgba(213,171,95,.6)}
+.summary{border:1px solid var(--line2);border-radius:16px;background:#1d160a;padding:22px 24px;margin-top:32px;font-size:16.5px;color:var(--ivory)}
+.summary b{color:var(--gold2)}
+.hint{color:var(--muted);font-size:13.5px;margin-top:16px;line-height:1.7}
+/* FAQ */
+.faq{max-width:780px;margin:50px auto 0}
+.faq details{border:1px solid var(--line);border-radius:16px;background:var(--panel);margin-bottom:12px;padding:0 22px}
+.faq details[open]{border-color:var(--line2)}
+.faq summary{cursor:pointer;padding:20px 0;font:500 16px var(--sans);color:var(--ivory);list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:300 24px/1 var(--sans);color:var(--gold);transition:.3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);font-size:14.5px}
+/* Kontakt & Footer */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact-grid>div{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px}
+.contact-grid h3{font:600 12px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.contact-grid p{color:var(--muted);font-size:15px}
+.contact-grid a{color:var(--body)}
+.contact-grid a:hover{color:var(--gold2)}
+footer{border-top:1px solid var(--line);padding:52px 0 40px;text-align:center}
+.foot-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:26px 0 18px}
+.foot-links a{font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:.3s;cursor:pointer}
+.foot-links a:hover{color:var(--gold)}
+footer small{color:#6f6c5f;font-size:12px}
+.legal{max-width:720px;margin:30px auto 0;text-align:left;color:var(--muted);font-size:14px;display:none}
+.legal.open{display:block}
+.legal h4{color:var(--ivory);font:700 15px var(--disp);text-transform:uppercase;letter-spacing:.06em;margin:22px 0 8px}
+/* ---------- Scrolly-Hero ---------- */
+.scrolly{position:relative;height:420svh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--bg)}
+.stage video,.sframe{position:absolute;inset:0;width:100%;height:100%}
+.stage video{object-fit:cover;display:none}
+.stage.video-on video{display:block}
+.stage.video-on .sframe{display:none}
+.sframe{opacity:0;will-change:opacity,transform}
+.sframe img{width:100%;height:100%;object-fit:cover}
+.stage::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.55),rgba(11,11,13,.12) 45%,rgba(11,11,13,.78));pointer-events:none}
+.schapter{position:absolute;inset:auto 0 11vh 0;z-index:3;text-align:center;padding:0 6vw;opacity:0;transform:translateY(26px);transition:.6s var(--ease);pointer-events:none}
+.schapter.on{opacity:1;transform:none;pointer-events:auto}
+.schapter h1,.schapter h2{font-size:clamp(32px,6.6vw,72px);margin-top:16px}
+.schapter p{color:var(--body);max-width:560px;margin:10px auto 0}
+.sprogress{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:3px;height:130px;background:rgba(233,200,126,.18);border-radius:99px;z-index:4}
+.sprogress i{display:block;width:100%;height:0;background:linear-gradient(180deg,var(--gold),var(--gold2));border-radius:99px;box-shadow:0 0 14px rgba(213,171,95,.85)}
+.scroll-cue{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:4;color:var(--gold2);font:600 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
+.scroll-cue::after{content:"";width:1px;height:30px;background:linear-gradient(var(--gold),transparent);animation:cue 1.8s infinite}
+@keyframes cue{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.scrolly{height:auto}.stage{position:relative}.sframe:first-of-type{opacity:1}}
+/* ---------- Mobile-Optimierung ---------- */
+.fab{display:none}
+@media(max-width:900px){
+  .hero{min-height:auto}
+  .hero-grid{padding:104px 0 56px;gap:34px}
+  .hero .sub{margin-bottom:26px}
+  .hero-facts{gap:14px;margin-top:30px;justify-content:space-between;width:100%}
+  .hero-facts div b{font-size:15px}
+  .showcase{max-width:480px;margin-inline:auto;width:100%}
+  section{padding:64px 0}
+  .split{gap:34px}
+  .news .inner{padding:46px 20px;border-radius:22px}
+  .price-block{padding:24px 20px}
+  .contact-grid>div{padding:24px 22px}
+  .cal{padding:18px 14px}
+  .book-grid{margin-top:38px}
+}
+@media(max-width:700px){
+  .masonry{columns:2 130px;column-gap:10px}
+  .masonry figure{margin-bottom:10px;border-radius:14px}
+  .masonry figure::after{font-size:20px}
+  .glimmer span{font-size:16px;letter-spacing:.07em}
+  .quotes,.cards,.courses{gap:14px}
+  .card-body{padding:20px 20px 24px}
+  .fab{display:inline-flex;position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:49;padding:15px 30px;white-space:nowrap}
+  body{padding-bottom:76px}
+}
+@media(max-width:520px){
+  .cta-row{flex-direction:column;align-items:stretch}
+  .cta-row .btn{width:100%}
+  h2{font-size:clamp(26px,7.6vw,34px)}
+  .chip{padding:9px 14px;letter-spacing:.18em}
+  .brand small{display:none}
+  .brand img{height:40px}
+  .steps span{padding:8px 12px;font-size:10.5px;letter-spacing:.1em}
+  .slots{grid-template-columns:repeat(3,1fr)}
+  .dots button{width:28px}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NailSalon","name":"Kerstin Kreis Beauty","description":"Nagelstudio, Wimpernverlängerung und kosmetische Fußpflege in Leipheim bei Günzburg.","telephone":"+4917632731073","email":"k.kerstin89@googlemail.com","address":{"@type":"PostalAddress","streetAddress":"Günzburger Str. 23","postalCode":"89340","addressLocality":"Leipheim","addressCountry":"DE"},"openingHours":"Mo-Fr 07:30-17:00","priceRange":"€€","sameAs":["https://www.instagram.com/nails.lashes_kerstin_kreis/","https://www.facebook.com/NailsLashes-Kerstin-Kreis-1586913608259294/","https://share.google/OKkJY6RSZH8TK111I"]}</script>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="#top">
+    <img src="https://static.wixstatic.com/media/c54bfb_d0513019b1f340e193f95914e5ffb708~mv2.png/v1/fit/w_240,h_150,q_90/kk.png" alt="Kerstin Kreis – Nails & Lashes" onerror="this.remove()">
+    <span><b>Kerstin Kreis</b><small>Beauty · Leipheim</small></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#ueber">Über mich</a></li>
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="schulungen.html">Schulungen</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a class="btn btn-gold" href="#buchung">Termin sichern</a></li>
+  </ul>
+  <a class="btn btn-gold" href="#buchung">Termin sichern</a>
+  <button class="burger" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="scrolly" id="top"><div class="stage" id="stage">
+  <video id="scrubVid" muted playsinline preload="auto"></video>
+  <div class="sframe"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_7c2444d06aab454997d6f33642057346~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Studio in Leipheim" fetchpriority="high"></div>
+  <div class="sframe"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_bc24166c718843bf9b60e5d7bdf5a0af~mv2.jpeg/v1/fill/w_1600,h_1000,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Handwerk am Nagel" loading="lazy"></div>
+  <div class="sframe"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_2576bc4acd3a4fb2b2e8ff0f347b0210~mv2.jpg/v1/fill/w_1600,h_1000,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Fertiges Nageldesign" loading="lazy"></div>
+  <div class="sframe"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_a2e97a927e43431494124c1a3e3587a1~mv2_d_1390_1880_s_2.jpg/v1/fill/w_1600,h_1000,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Zufriedene Kundin" loading="lazy"></div>
+  <div class="sparkles"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="schapter on"><span class="chip">Nagelstudio · Wimpern · Fußpflege — Leipheim</span><h1>Ein Besuch bei <span class="gold-text">Kerstin Kreis</span></h1><p>Scrollen Sie sich durch Studio, Handwerk und Ergebnis.</p><div class="cta-row" style="justify-content:center;margin-top:22px"><a class="btn btn-gold" href="#buchung">Termin sichern</a></div></div>
+  <div class="schapter"><span class="chip">Kapitel 1</span><h2>Das <span class="gold-text">Studio</span></h2><p>Ihr Rückzugsort mitten in Leipheim.</p></div>
+  <div class="schapter"><span class="chip">Kapitel 2</span><h2>Das <span class="gold-text">Handwerk</span></h2><p>Präzision aus über 10 Jahren Erfahrung – von der Nailover-Trainerin.</p></div>
+  <div class="schapter"><span class="chip">Kapitel 3</span><h2>Das <span class="gold-text">Ergebnis</span></h2><p>★★★★★ Kundinnen lieben es.</p><div class="cta-row" style="justify-content:center;margin-top:22px"><a class="btn btn-gold" href="#buchung">Termin sichern</a><a class="btn btn-ghost" href="#galerie">Galerie</a></div></div>
+  <div class="sprogress"><i></i></div>
+  <div class="scroll-cue">Scrollen</div>
+</div></header>
+
+<div class="glimmer" aria-hidden="true"><div class="wrap">
+  <span>Nägel</span><i>✦</i><span style="animation-delay:2s">Wimpern</span><i>✦</i><span style="animation-delay:4s">Fußpflege</span><i>✦</i><span style="animation-delay:6s">Nailart</span><i>✦</i><span style="animation-delay:8s">Schulungen</span>
+</div></div>
+
+<section id="ueber"><div class="wrap split">
+  <div class="reveal"><div class="about-pic">
+    <img class="about-bg" src="https://static.wixstatic.com/media/c54bfb_31e010959e444aa6a6ec29b968bb7191~mv2.jpg/v1/fit/w_300,h_400,q_80/kk.jpg" alt="" aria-hidden="true" loading="lazy">
+    <img class="ph about-fg" src="https://static.wixstatic.com/media/c54bfb_31e010959e444aa6a6ec29b968bb7191~mv2.jpg/v1/fit/w_660,h_860,q_90/kk.jpg" alt="Kerstin Kreis – Inhaberin &amp; Nailover-Trainerin" loading="lazy" onerror="this.remove()">
+  </div></div>
+  <div class="reveal">
+    <span class="chip">Über mich</span>
+    <h2>Vom Millimeter zur <span class="gold-text">Perfektion</span></h2>
+    <p>Als gelernte Augenoptikerin habe ich auf den Millimeter genau gearbeitet – heute kommt diese Präzision Ihren Nägeln zugute. Und weil ich als Trainerin selbst Nageldesignerinnen ausbilde, bekommen Sie immer die neueste Technik.</p>
+    <div class="mile">
+      <span><b>2015</b> Start in der Nagelbranche</span>
+      <span><b>2017</b> Eigenes Studio</span>
+      <span><b>2020</b> Nailover Educator</span>
+    </div>
+    <div class="usps reveal">
+      <span>Hochwertige Nailover-Markenprodukte</span>
+      <span>Hygiene hat Priorität: frisch desinfizierte Werkzeuge &amp; Arbeitsplätze</span>
+      <span>Zertifizierte Technical Educatorin – laufende Weiterbildung</span>
+    </div>
+    <p style="margin-top:28px"><a class="btn btn-gold" href="#buchung">Termin anfragen</a></p>
+  </div>
+</div></section>
+
+<section id="leistungen" style="padding-top:0"><div class="wrap">
+  <div style="text-align:center"><span class="chip reveal">Leistungen</span></div>
+  <h2 class="reveal" style="text-align:center">Drei Wege zu Ihrem <span class="gold-text">Auftritt</span></h2>
+  <div class="cards">
+    <article class="card reveal">
+      <div class="pic"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_16caaf75243942f7b600053ddc043280~mv2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Nageldesign" loading="lazy" onerror="this.remove()"></div>
+      <div class="card-body"><h3>Nägel</h3><div class="from">ab 15 € · Neumodellage 87 €</div>
+      <p>Modellage, Maniküre &amp; Nailart in Trainerinnen-Qualität – hält 3–4 Wochen.</p>
+      <a class="tlink" href="preise.html">Preise</a></div>
+    </article>
+    <article class="card reveal">
+      <div class="pic"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_d22717ce87504e8a9a12f26aa2f1e94a~mv2_d_1390_1880_s_2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Wimpern" loading="lazy" onerror="this.remove()"></div>
+      <div class="card-body"><h3>Wimpern</h3><div class="from">ab 199 €</div>
+      <p>Aufwachen und strahlen – ohne Mascara. Abgestimmt auf Ihre Augenform.</p>
+      <a class="tlink" href="#buchung">Beratung anfragen</a></div>
+    </article>
+    <article class="card reveal">
+      <div class="pic"><img class="ph" src="https://static.wixstatic.com/media/c54bfb_d73785ee3af1477386a0a5c11528c72f~mv2_d_1600_1464_s_2.jpg/v1/fill/w_700,h_700,al_c,q_85,enc_avif,quality_auto/kk.jpg" alt="Fußpflege" loading="lazy" onerror="this.remove()"></div>
+      <div class="card-body"><h3>Füße</h3><div class="from">ab 15 € · Fußpflege 43 €</div>
+      <p>Kosmetische Fußpflege &amp; Pediküre mit Gel – gepflegt bis in die Zehenspitzen.</p>
+      <a class="tlink" href="preise.html">Preise</a></div>
+    </article>
+  </div>
+</div></section>
+
+
+<section id="preise" style="padding:70px 0"><div class="wrap" style="text-align:center">
+  <span class="chip reveal">Leistungen &amp; Preise</span>
+  <h2 class="reveal">Ehrlich &amp; <span class="gold-text">transparent</span></h2>
+  <div class="mile reveal" style="justify-content:center">
+    <span><b>87 €</b> Neumodellage</span><span><b>43 €</b> Fußpflege</span><span><b>ab 199 €</b> Wimpern</span>
+  </div>
+  <p class="reveal" style="margin-top:26px"><a class="btn btn-ghost" href="preise.html">Zur kompletten Preisliste</a></p>
+</div></section>
+
+<section id="galerie" style="padding-top:0"><div class="wrap">
+  <div style="text-align:center"><span class="chip reveal">Galerie</span></div>
+  <h2 class="reveal" style="text-align:center">Arbeiten, die <span class="gold-text">sprechen</span></h2>
+  <p class="sub reveal" style="text-align:center;margin-inline:auto">Ein kleiner Auszug – die neuesten Arbeiten gibt es täglich auf Instagram.</p>
+  <div class="caro-wrap reveal">
+    <button class="caro-btn caro-prev" aria-label="Zurück">‹</button>
+    <div class="caro" id="caro"></div>
+    <button class="caro-btn caro-next" aria-label="Weiter">›</button>
+  </div>
+  <div class="cta-row reveal" style="justify-content:center;margin-top:36px">
+    <a class="btn btn-gold" href="https://www.instagram.com/nails.lashes_kerstin_kreis/" target="_blank" rel="noopener">Aktuelle Arbeiten auf Instagram</a>
+    <a class="btn btn-ghost" href="#buchung">So etwas möchte ich auch</a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div style="text-align:center"><span class="chip reveal">Kundenmeinungen</span></div>
+  <h2 class="reveal" style="text-align:center">5 Sterne, <span class="gold-text">3 Stimmen</span></h2>
+  <div class="qcaro reveal" id="qcaro">
+    <div class="quote on"><div class="stars">★★★★★</div><p>„Kerstin kann ich einfach nur empfehlen, macht immer ne super Arbeit!"</p><cite>Alexandra Sepp</cite></div>
+    <div class="quote"><div class="stars">★★★★★</div><p>„Sie ist die Beste von allen."</p><cite>Taddy Wee</cite></div>
+    <div class="quote"><div class="stars">★★★★★</div><p>„Immer wieder begeistert – kann ich wirklich nur empfehlen!"</p><cite>Adalbert Andrea</cite></div>
+  </div>
+  <div class="dots reveal" id="qdots" style="margin-top:20px"></div>
+  <p class="reveal" style="text-align:center;margin-top:38px"><a class="btn btn-gold" href="https://share.google/OKkJY6RSZH8TK111I" target="_blank" rel="noopener">Bewertungen auf Google lesen</a></p>
+</div></section>
+
+<section id="schulung" style="padding:70px 0;background:linear-gradient(180deg,#0e0e10,var(--bg));border-block:1px solid var(--line)"><div class="wrap" style="text-align:center">
+  <span class="chip reveal">Nailover Schulungspoint Augsburg / Ulm</span>
+  <h2 class="reveal">Nageldesign <span class="gold-text">lernen</span>?</h2>
+  <p class="sub reveal" style="margin-inline:auto">Als Technical Educator bilde ich selbst Nageldesignerinnen aus – vor Ort in Leipheim oder online.</p>
+  <p class="reveal" style="margin-top:26px"><a class="btn btn-ghost" href="schulungen.html">Zu den Schulungen</a></p>
+</div></section>
+
+<section id="buchung" style="background:radial-gradient(60% 80% at 50% 0,#221a0c 0,var(--bg) 75%);border-top:1px solid var(--line)"><div class="wrap">
+  <div style="text-align:center"><span class="chip reveal">Terminanfrage</span></div>
+  <h2 class="reveal" style="text-align:center">In 3 Schritten zum <span class="gold-text">Termin</span></h2>
+  <div class="book-grid">
+    <div class="steps"><span>1 · Leistung</span><span>2 · Termin</span><span>3 · Absenden</span></div>
+    <div id="svc" class="svc-list"></div>
+    <div class="cal" id="cal">
+      <div class="cal-head"><button id="calPrev" aria-label="Voriger Monat">‹</button><b id="calTitle"></b><button id="calNext" aria-label="Nächster Monat">›</button></div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="slots" id="slots"></div>
+    </div>
+    <div id="details">
+      <div class="field"><label for="fName">Ihr Name</label><input id="fName" autocomplete="name" placeholder="Vor- und Nachname"></div>
+      <div class="field"><label for="fTel">Telefon</label><input id="fTel" autocomplete="tel" placeholder="Für Rückfragen"></div>
+      <div class="field"><label for="fNote">Anmerkung (optional)</label><textarea id="fNote" rows="3" placeholder="Wünsche, Design-Ideen …"></textarea></div>
+      <div class="summary" id="summary"></div>
+      <div class="cta-row" style="margin-top:24px">
+        <button class="btn btn-gold" id="sendWa" disabled>Per WhatsApp senden</button>
+        <button class="btn btn-ghost" id="sendMail" disabled>Per E-Mail senden</button>
+      </div>
+      <p class="hint">Ich bestätige jede Anfrage persönlich – erst dann ist der Termin verbindlich. Mo–Fr, 07:30–17:00 Uhr.</p>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:90px"><div class="wrap">
+  <div style="text-align:center"><span class="chip reveal">FAQ</span></div>
+  <h2 class="reveal" style="text-align:center">Gut zu <span class="gold-text">wissen</span></h2>
+  <div class="faq reveal">
+    <details><summary>Wie schnell bekomme ich einen Termin?</summary><p>Anfragen beantworte ich in der Regel noch am selben Tag – gemeinsam finden wir schnell einen passenden Termin.</p></details>
+    <details><summary>Wie lange hält eine Modellage?</summary><p>Bei guter Pflege 3–4 Wochen bis zum Auffüllen.</p></details>
+    <details><summary>Was erwartet mich als Neukundin?</summary><p>Persönliche Beratung zu Form, Länge und Design – Sie sagen, was Ihnen gefällt, den Rest übernehme ich.</p></details>
+    <details><summary>Geht Buchen auch ohne Kalender?</summary><p>Klar – einfach per WhatsApp an 0176 32731073 oder anrufen.</p></details>
+    <details><summary>Kann ich mit Karte zahlen?</summary><p>Ja, Kartenzahlung ist möglich – Barzahlung natürlich auch.</p></details>
+    <details><summary>Gibt es Parkplätze?</summary><p>Ja, kostenlose Parkplätze sind direkt am Studio verfügbar.</p></details>
+  </div>
+</div></section>
+
+<section id="kontakt" style="padding-top:0"><div class="wrap">
+  <div style="text-align:center"><span class="chip reveal">Kontakt</span></div>
+  <h2 class="reveal" style="text-align:center">Mitten in <span class="gold-text">Leipheim</span></h2>
+  <div class="contact-grid">
+    <div class="reveal"><h3>Adresse</h3><p>Günzburger Str. 23<br>89340 Leipheim</p>
+      <p style="margin-top:12px"><a class="tlink" href="https://www.google.com/maps/search/?api=1&query=G%C3%BCnzburger+Str.+23%2C+89340+Leipheim" target="_blank" rel="noopener">Route planen</a></p></div>
+    <div class="reveal"><h3>Öffnungszeiten</h3><p>Mo – Fr · 07:30 – 17:00 Uhr<br>Termine nach Vereinbarung</p></div>
+    <div class="reveal"><h3>Direkt erreichen</h3><p><a href="tel:+4917632731073">0176 32731073</a><br><a href="https://wa.me/4917632731073" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:k.kerstin89@googlemail.com">E-Mail</a></p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="brand" style="justify-content:center">
+    <img src="https://static.wixstatic.com/media/c54bfb_d0513019b1f340e193f95914e5ffb708~mv2.png/v1/fit/w_240,h_150,q_90/kk.png" alt="Kerstin Kreis – Nails & Lashes" style="height:52px" onerror="this.remove()">
+    <span style="text-align:left"><b>Kerstin Kreis</b><small>Beauty · Leipheim</small></span>
+  </div>
+  <div class="foot-links">
+    <a href="#leistungen">Leistungen</a><a href="preise.html">Preise</a><a href="#galerie">Galerie</a><a href="schulungen.html">Schulungen</a>
+    <a href="https://www.instagram.com/nails.lashes_kerstin_kreis/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/NailsLashes-Kerstin-Kreis-1586913608259294/" target="_blank" rel="noopener">Facebook</a>
+    <a onclick="document.getElementById('legal').classList.toggle('open')">Impressum &amp; Datenschutz</a>
+  </div>
+  <p style="color:var(--muted);font-size:13px;max-width:660px;margin:0 auto 14px">Kerstin Kreis Beauty – Ihr Nagelstudio für Nageldesign, Wimpernverlängerung und kosmetische Fußpflege in Leipheim, gerne besucht aus Günzburg, Ulm und Umgebung.</p>
+  <small>© <span id="year">2026</span> Kerstin Kreis Beauty · Günzburger Str. 23 · 89340 Leipheim</small>
+  <div class="legal" id="legal">
+    <h4>Impressum – Angaben gemäß § 5 TMG</h4>
+    <p>Kerstin Kreis · Kerstin Kreis Beauty – Nägel, Wimpern, Kosmetische Fußpflege<br>Günzburger Str. 23, 89340 Leipheim<br>Mobil: +49 176 32731073 · E-Mail: k.kerstin89@googlemail.com</p>
+    <h4>Haftungsausschluss</h4>
+    <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Partner: C's hairLOUNGE – Cemo Tepe (cemo-tepe.de), Nailover Deutschland O.L.N-Beauty (oln-beauty.de).</p>
+    <h4>Datenschutz</h4>
+    <p>Diese Website verwendet keine Cookies und keine Tracking-Dienste. Bilder werden über das CDN von Wix (static.wixstatic.com), Schriften über Google Fonts geladen; dabei wird Ihre IP-Adresse an die Anbieter übertragen. Bei Terminanfragen per WhatsApp oder E-Mail gelten die Datenschutzbestimmungen des jeweiligen Dienstes. Verantwortliche Stelle im Sinne der DSGVO ist die oben genannte Inhaberin; Sie haben jederzeit das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten.</p>
+  </div>
+</div></footer>
+
+<a class="btn btn-gold fab" href="#buchung">✦ Termin sichern</a>
+
+<div class="lightbox" id="lb">
+  <button class="lb-prev" aria-label="Zurück">‹</button><img alt=""><button class="lb-next" aria-label="Weiter">›</button><button class="lb-close" aria-label="Schließen">✕</button>
+</div>
+
+<script>
+// ---------- Galerie-Karussell ----------
+const CDN="https://static.wixstatic.com/media/";
+const PICS=["c54bfb_49b4ccdcfc894332b1384999e2fb2e02~mv2.jpeg","c54bfb_cbc2b087b0e64537ad02ec80f19c21cf~mv2.jpeg","c54bfb_847ae84f0fca441a80a0fd16015efdfb~mv2.jpeg","c54bfb_ed6e688988304a0e88ef42688c7a1537~mv2_d_2448_3264_s_4_2.jpg","c54bfb_9f7216387d844e1481daf09a38198198~mv2_d_2448_3264_s_4_2.jpg","c54bfb_e287088b9bbf43fea075a586063d9ea7~mv2.jpg","c54bfb_aa7168928e3c4af9bfe91147d02673bb~mv2_d_1390_1880_s_2.jpg","c54bfb_d22717ce87504e8a9a12f26aa2f1e94a~mv2_d_1390_1880_s_2.jpg","c54bfb_c7397c100cc6478286b4c58494f8ffac~mv2.jpg","c54bfb_466d8be292e542e189ea589a70648b1c~mv2_d_3264_2448_s_4_2.jpg","c54bfb_7c2444d06aab454997d6f33642057346~mv2.jpg","c54bfb_16caaf75243942f7b600053ddc043280~mv2.jpg"];
+const fit=(i,w,ht)=>`${CDN}${i}/v1/fit/w_${w},h_${ht},q_85,enc_avif,quality_auto/kk.jpg`;
+const caro=document.getElementById("caro"),lbList=PICS.map(i=>fit(i,1600,1600));
+PICS.forEach((i,n)=>{const f=document.createElement("figure");
+  f.innerHTML=`<img class="ph" src="${fit(i,480,640)}" alt="Beispielarbeit von Kerstin Kreis" loading="lazy" onerror="this.parentNode.remove()">`;
+  f.onclick=()=>show(n);caro.appendChild(f)});
+document.querySelector(".caro-prev").onclick=()=>caro.scrollBy({left:-caro.clientWidth*.8,behavior:"smooth"});
+document.querySelector(".caro-next").onclick=()=>caro.scrollBy({left:caro.clientWidth*.8,behavior:"smooth"});
+// Lightbox
+const lb=document.getElementById("lb"),lbImg=lb.querySelector("img");let li=0;
+function show(n){li=(n+lbList.length)%lbList.length;lbImg.src=lbList[li];lb.classList.add("open")}
+lb.querySelector(".lb-prev").onclick=e=>{e.stopPropagation();show(li-1)};
+lb.querySelector(".lb-next").onclick=e=>{e.stopPropagation();show(li+1)};
+lb.querySelector(".lb-close").onclick=()=>lb.classList.remove("open");
+lb.addEventListener("click",e=>{if(e.target===lb)lb.classList.remove("open")});
+addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;
+ if(e.key==="Escape")lb.classList.remove("open");if(e.key==="ArrowLeft")show(li-1);if(e.key==="ArrowRight")show(li+1)});
+
+// ---------- Bewertungs-Karussell ----------
+const qc=document.getElementById("qcaro");
+if(qc){const qs=[...qc.children],qd=document.getElementById("qdots");let qi=0,qt;
+  const fitH=()=>{qc.style.minHeight="";qc.style.minHeight=Math.max(...qs.map(q=>q.offsetHeight))+"px"};
+  qs.forEach((_,n)=>{const d=document.createElement("button");d.setAttribute("aria-label","Bewertung "+(n+1));
+    d.onclick=()=>{qgo(n);qreset()};qd.appendChild(d)});
+  const dts=[...qd.children];
+  const qgo=n=>{qs[qi].classList.remove("on");dts[qi].classList.remove("on");
+    qi=(n+qs.length)%qs.length;qs[qi].classList.add("on");dts[qi].classList.add("on")};
+  const qreset=()=>{clearInterval(qt);qt=setInterval(()=>qgo(qi+1),5200)};
+  dts[0].classList.add("on");qreset();fitH();
+  addEventListener("resize",fitH);addEventListener("load",fitH);
+}
+
+// ---------- Scrolly-Hero: Scroll steuert die Frames ----------
+const scrolly=document.querySelector(".scrolly"),stage=document.getElementById("stage");
+if(scrolly){
+  const vid=document.getElementById("scrubVid"),frames=[...stage.querySelectorAll(".sframe")],
+        chaps=[...stage.querySelectorAll(".schapter")],bar=stage.querySelector(".sprogress i");
+  const VIDEO_URL="hero-scrub.mp4"; // Liegt die Datei nicht bei, läuft automatisch der Foto-Fallback
+  if(VIDEO_URL){vid.src=VIDEO_URL;
+    vid.addEventListener("loadedmetadata",()=>stage.classList.add("video-on"));vid.load()}
+  let target=0,cur=-1,raf=null;
+  const prog=()=>{const r=scrolly.getBoundingClientRect();
+    return Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)))};
+  function paint(){
+    cur+=(target-cur)*.14;
+    if(stage.classList.contains("video-on")&&vid.duration){
+      vid.currentTime=cur*Math.max(0,vid.duration-.05);
+    }else{
+      const x=cur*(frames.length-1);
+      frames.forEach((f,i)=>{const d=Math.abs(x-i);
+        f.style.opacity=Math.max(0,1-d*1.35);
+        f.style.transform=`scale(${(1.1-Math.max(0,1-d)*.1).toFixed(4)})`});
+    }
+    bar.style.height=(cur*100)+"%";
+    const ci=Math.min(chaps.length-1,Math.floor(cur*chaps.length));
+    chaps.forEach((c,i)=>c.classList.toggle("on",i===ci));
+    raf=Math.abs(target-cur)>.001?requestAnimationFrame(paint):null;
+  }
+  const kick=()=>{target=prog();if(!raf)raf=requestAnimationFrame(paint)};
+  addEventListener("scroll",kick,{passive:true});addEventListener("resize",kick);
+  kick();
+}
+
+// ---------- Navigation & Reveal ----------
+const nav=document.querySelector(".nav");
+addEventListener("scroll",()=>nav.classList.toggle("solid",scrollY>40),{passive:true});
+document.querySelector(".burger").onclick=()=>document.body.classList.toggle("menu-open");
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.body.classList.remove("menu-open")));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+document.getElementById("year").textContent=new Date().getFullYear();
+
+// ---------- Buchungskalender ----------
+const SERVICES=[
+ {n:"Neumodellage",d:120,p:"87 €"},{n:"Auffüllen",d:90,p:"ab 70 €"},{n:"Maniküre",d:45,p:"32 €"},
+ {n:"Nagelreparatur",d:30,p:"15 €"},{n:"Modellage entfernen + Lack",d:60,p:"38 €"},{n:"Wimpern",d:60,p:"ab 199 €"},
+ {n:"Kosmetische Fußpflege",d:60,p:"43 €"},{n:"Pediküre mit Gel",d:75,p:"47 €"},
+ {n:"Fußpflege + Gelmodellage",d:90,p:"65 €"},{n:"Beratung Nailover Schulung",d:30,p:"kostenlos"}];
+const OPEN=7.5*60,CLOSE=17*60,STEP=30,WEEKS=8,PHONE="4917632731073",MAIL="k.kerstin89@googlemail.com";
+const WD=["Mo","Di","Mi","Do","Fr","Sa","So"],MOI=["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+let sel={svc:null,date:null,time:null},view=new Date();view.setDate(1);
+const $=q=>document.querySelector(q);
+const fmt=d=>`${WD[(d.getDay()+6)%7]}, ${String(d.getDate()).padStart(2,"0")}.${String(d.getMonth()+1).padStart(2,"0")}.${d.getFullYear()}`;
+const svcBox=$("#svc");
+SERVICES.forEach(s=>{
+  const b=document.createElement("button");b.className="svc";
+  b.innerHTML=`<b>${s.n} <em>${s.p}</em></b><small>ca. ${s.d} Min.</small>`;
+  b.onclick=()=>{sel.svc=s;sel.time=null;
+    svcBox.querySelectorAll(".svc").forEach(x=>x.classList.remove("sel"));b.classList.add("sel");
+    step(2);renderSlots();$("#cal").scrollIntoView({behavior:"smooth",block:"start"})};
+  svcBox.appendChild(b);
+});
+function renderCal(){
+  const y=view.getFullYear(),m=view.getMonth();
+  $("#calTitle").textContent=`${MOI[m]} ${y}`;
+  const today=new Date();today.setHours(0,0,0,0);
+  const max=new Date(today);max.setDate(max.getDate()+WEEKS*7);
+  $("#calPrev").disabled=(y===today.getFullYear()&&m===today.getMonth());
+  $("#calNext").disabled=(y===max.getFullYear()&&m===max.getMonth());
+  const g=$("#calGrid");g.innerHTML=WD.map(w=>`<span class="dow">${w}</span>`).join("");
+  const off=(new Date(y,m,1).getDay()+6)%7;
+  for(let i=0;i<off;i++)g.insertAdjacentHTML("beforeend","<span></span>");
+  const days=new Date(y,m+1,0).getDate();
+  for(let d=1;d<=days;d++){
+    const dt=new Date(y,m,d),wd=(dt.getDay()+6)%7;
+    const btn=document.createElement("button");btn.className="day";btn.textContent=d;
+    btn.disabled=dt<=today||dt>max||wd>4;
+    if(sel.date&&dt.getTime()===sel.date.getTime())btn.classList.add("sel");
+    btn.onclick=()=>{sel.date=dt;sel.time=null;renderCal();renderSlots()};
+    g.appendChild(btn);
+  }
+}
+$("#calPrev").onclick=()=>{view.setMonth(view.getMonth()-1);renderCal()};
+$("#calNext").onclick=()=>{view.setMonth(view.getMonth()+1);renderCal()};
+function renderSlots(){
+  const box=$("#slots");box.innerHTML="";
+  if(!sel.svc||!sel.date){box.innerHTML='<p class="hint">Bitte zuerst Leistung und Tag wählen.</p>';update();return}
+  for(let t=OPEN;t+sel.svc.d<=CLOSE;t+=STEP){
+    const hh=String(Math.floor(t/60)).padStart(2,"0"),mm=String(t%60).padStart(2,"0");
+    const b=document.createElement("button");b.className="slot";b.textContent=`${hh}:${mm}`;
+    if(sel.time===b.textContent)b.classList.add("sel");
+    b.onclick=()=>{sel.time=b.textContent;renderSlots();step(3);$("#details").scrollIntoView({behavior:"smooth",block:"start"})};
+    box.appendChild(b);
+  }
+  update();
+}
+function step(n){document.querySelectorAll(".steps span").forEach((s,i)=>s.classList.toggle("on",i<n))}
+function update(){
+  const ok=sel.svc&&sel.date&&sel.time;
+  $("#summary").innerHTML=ok
+   ?`Ihre Anfrage: <b>${sel.svc.n}</b> am <b>${fmt(sel.date)}</b> um <b>${sel.time} Uhr</b> (ca. ${sel.svc.d} Min.)`
+   :"Wählen Sie Leistung, Tag und Uhrzeit – die Zusammenfassung erscheint hier.";
+  $("#sendWa").disabled=$("#sendMail").disabled=!ok;
+}
+function msg(){
+  const name=$("#fName").value.trim(),tel=$("#fTel").value.trim(),note=$("#fNote").value.trim();
+  return`Hallo Kerstin, ich möchte gerne einen Termin anfragen:\n• Leistung: ${sel.svc.n}\n• Datum: ${fmt(sel.date)}\n• Uhrzeit: ${sel.time} Uhr\n• Name: ${name||"-"}\n• Telefon: ${tel||"-"}${note?`\n• Anmerkung: ${note}`:""}`;
+}
+$("#sendWa").onclick=()=>open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg())}`,"_blank");
+$("#sendMail").onclick=()=>location.href=`mailto:${MAIL}?subject=${encodeURIComponent("Terminanfrage – "+sel.svc.n)}&body=${encodeURIComponent(msg())}`;
+renderCal();renderSlots();step(1);update();
+</script>
+</body>
+</html>
