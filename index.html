@@ -560,7 +560,7 @@ const scrolly=document.querySelector(".scrolly"),stage=document.getElementById("
 if(scrolly){
   const vid=document.getElementById("scrubVid"),frames=[...stage.querySelectorAll(".sframe")],
         chaps=[...stage.querySelectorAll(".schapter")],bar=stage.querySelector(".sprogress i");
-  const VIDEO_URL="images/hero-scrub2.mp4"; // Liegt die Datei nicht bei, läuft automatisch der Foto-Fallback
+  const VIDEO_URL="images/hero-scrub3.mp4"; // Liegt die Datei nicht bei, läuft automatisch der Foto-Fallback
   if(VIDEO_URL){vid.src=VIDEO_URL;
     vid.addEventListener("loadedmetadata",()=>stage.classList.add("video-on"));vid.load()}
   let target=0,cur=-1,raf=null;
