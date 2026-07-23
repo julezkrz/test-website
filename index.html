@@ -114,8 +114,8 @@ background:radial-gradient(55% 70% at 18% 12%,rgba(213,171,95,.16),transparent 6
 .marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-group{display:flex;align-items:center;gap:44px;padding-right:44px}
-.marquee span{font:800 clamp(18px,2.6vw,30px)/1.25 var(--disp);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
-.marquee i{color:rgba(233,200,126,.45);font-style:normal;font-size:14px}
+.marquee span{font:300 clamp(16px,2.1vw,25px)/1.25 var(--sans);text-transform:uppercase;letter-spacing:.32em;white-space:nowrap}
+.marquee i{width:36px;height:1px;flex:none;background:linear-gradient(90deg,transparent,rgba(233,200,126,.6),transparent)}
 @keyframes marquee{to{transform:translateX(-50%)}}
 /* Social-Leiste */
 .rail{position:fixed;left:18px;top:50%;transform:translateY(-50%);z-index:45;display:flex;flex-direction:column;gap:10px}
@@ -296,7 +296,9 @@ footer small{color:#6f6c5f;font-size:12px}
   .masonry{columns:2 130px;column-gap:10px}
   .masonry figure{margin-bottom:10px;border-radius:14px}
   .masonry figure::after{font-size:20px}
-  .marquee span{font-size:16px;letter-spacing:.07em}
+  .marquee span{font-size:14px;letter-spacing:.24em}
+  .marquee i{width:24px}
+  .marquee-group{gap:28px;padding-right:28px}
   .quotes,.cards,.courses{gap:14px}
   .card-body{padding:20px 20px 24px}
   .fab{display:inline-flex;position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:49;padding:15px 30px;white-space:nowrap}
@@ -358,12 +360,12 @@ footer small{color:#6f6c5f;font-size:12px}
 
 <div class="marquee" aria-hidden="true"><div class="marquee-track">
   <div class="marquee-group">
-    <span class="gold-text">Nägel</span><i>✦</i><span class="gold-text">Wimpern</span><i>✦</i><span class="gold-text">Fußpflege</span><i>✦</i><span class="gold-text">Nailart</span><i>✦</i><span class="gold-text">Schulungen</span><i>✦</i>
-    <span class="gold-text">Nägel</span><i>✦</i><span class="gold-text">Wimpern</span><i>✦</i><span class="gold-text">Fußpflege</span><i>✦</i><span class="gold-text">Nailart</span><i>✦</i><span class="gold-text">Schulungen</span><i>✦</i>
+    <span class="gold-text">Nägel</span><i></i><span class="gold-text">Wimpern</span><i></i><span class="gold-text">Fußpflege</span><i></i><span class="gold-text">Nailart</span><i></i><span class="gold-text">Schulungen</span><i></i>
+    <span class="gold-text">Nägel</span><i></i><span class="gold-text">Wimpern</span><i></i><span class="gold-text">Fußpflege</span><i></i><span class="gold-text">Nailart</span><i></i><span class="gold-text">Schulungen</span><i></i>
   </div>
   <div class="marquee-group">
-    <span class="gold-text">Nägel</span><i>✦</i><span class="gold-text">Wimpern</span><i>✦</i><span class="gold-text">Fußpflege</span><i>✦</i><span class="gold-text">Nailart</span><i>✦</i><span class="gold-text">Schulungen</span><i>✦</i>
-    <span class="gold-text">Nägel</span><i>✦</i><span class="gold-text">Wimpern</span><i>✦</i><span class="gold-text">Fußpflege</span><i>✦</i><span class="gold-text">Nailart</span><i>✦</i><span class="gold-text">Schulungen</span><i>✦</i>
+    <span class="gold-text">Nägel</span><i></i><span class="gold-text">Wimpern</span><i></i><span class="gold-text">Fußpflege</span><i></i><span class="gold-text">Nailart</span><i></i><span class="gold-text">Schulungen</span><i></i>
+    <span class="gold-text">Nägel</span><i></i><span class="gold-text">Wimpern</span><i></i><span class="gold-text">Fußpflege</span><i></i><span class="gold-text">Nailart</span><i></i><span class="gold-text">Schulungen</span><i></i>
   </div>
 </div></div>
 
