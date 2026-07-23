@@ -1,7 +1,7 @@
 /* Kerstin Kreis Beauty – Consent-Manager
-   Externe Inhalte (Bilder via Wix-CDN, Schriften via Google Fonts) werden erst
-   nach ausdrücklicher Einwilligung geladen. Die Auswahl wird ausschließlich
-   lokal im Browser gespeichert (localStorage, kein Tracking). */
+   Externe Inhalte (Schriften via Google Fonts) werden erst nach ausdrücklicher
+   Einwilligung geladen. Die Auswahl wird ausschließlich lokal im Browser
+   gespeichert (localStorage, kein Tracking). */
 (function () {
   "use strict";
   var KEY = "kk-consent";
@@ -23,12 +23,9 @@
   function enableMedia() {
     if (!fontsOn) {
       fontsOn = true;
-      [["https://fonts.gstatic.com", true], ["https://static.wixstatic.com", false]].forEach(function (h) {
-        var l = document.createElement("link");
-        l.rel = "preconnect"; l.href = h[0];
-        if (h[1]) l.crossOrigin = "";
-        document.head.appendChild(l);
-      });
+      var l = document.createElement("link");
+      l.rel = "preconnect"; l.href = "https://fonts.gstatic.com"; l.crossOrigin = "";
+      document.head.appendChild(l);
       var f = document.createElement("link");
       f.rel = "stylesheet"; f.href = FONTS_CSS;
       document.head.appendChild(f);
@@ -62,13 +59,8 @@
     ".kkc-fab:hover{background:rgba(213,171,95,.18)}" +
     ".kkc-fab svg{width:20px;height:20px}" +
     "@media(max-width:700px){.kkc-fab{bottom:88px}}" +
-    /* Noch nicht freigegebene Bilder ausblenden (kein Broken-Image/Alt-Text) */
-    "img[data-consent-src]{display:none!important}" +
-    /* Platzhalter-Hinweis für blockierte Bilder */
-    "html:not(.kkc-on) .pic::before,html:not(.kkc-on) .about-pic::before,html:not(.kkc-on) .caro figure::before{" +
-    "content:'Bild wird erst nach Einwilligung geladen (Cookie-Einstellungen)';position:absolute;left:50%;top:50%;" +
-    "transform:translate(-50%,-50%);z-index:1;width:82%;text-align:center;color:#94907f;" +
-    "font:500 12px/1.6 'Outfit',system-ui,sans-serif;letter-spacing:.04em}";
+    /* Noch nicht freigegebene Inhalte ausblenden (kein Broken-Image/Alt-Text) */
+    "img[data-consent-src]{display:none!important}";
 
   var banner = null, fab = null;
 
@@ -97,8 +89,8 @@
     banner.innerHTML =
       '<div class="kkc-box">' +
       '<h3>Ihre Privatsphäre</h3>' +
-      '<p>Diese Website bindet externe Inhalte ein: Bilder über das Wix-CDN (Wix.com Ltd.) und Schriften von Google Fonts (Google Ireland Ltd.). ' +
-      'Diese Inhalte werden <strong>erst nach Ihrer Einwilligung</strong> geladen – dabei wird Ihre IP-Adresse an die Anbieter übertragen. ' +
+      '<p>Diese Website bindet Schriften von Google Fonts (Google Ireland Ltd.) ein. ' +
+      'Diese werden <strong>erst nach Ihrer Einwilligung</strong> geladen – dabei wird Ihre IP-Adresse an Google übertragen. Ohne Einwilligung wird eine Standardschrift Ihres Geräts verwendet. ' +
       'Ihre Auswahl wird nur lokal in Ihrem Browser gespeichert und kann jederzeit über „Cookie-Einstellungen“ (Footer bzw. Schild-Symbol) geändert werden. ' +
       '<a href="datenschutz.html">Datenschutzerklärung</a> · <a href="impressum.html">Impressum</a></p>' +
       '<div class="kkc-btns">' +
