@@ -82,7 +82,7 @@ body.menu-open .nav-links{opacity:1;visibility:visible}
 .burger{display:block}.nav>.btn{display:none}}
 @media(min-width:981px){.nav-links .btn{display:none}}
 /* Hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;
 background:radial-gradient(55% 70% at 18% 12%,rgba(213,171,95,.16),transparent 60%),radial-gradient(45% 60% at 88% 85%,rgba(213,171,95,.1),transparent 65%),var(--bg)}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center;width:min(1180px,92%);margin-inline:auto;padding:130px 0 70px;position:relative;z-index:2}
 .hero h1{font-size:clamp(36px,10vw,86px);font-weight:800;margin:18px 0 14px}
@@ -269,8 +269,8 @@ footer small{color:#6f6c5f;font-size:12px}
 .legal.open{display:block}
 .legal h4{color:var(--ivory);font:700 15px var(--disp);text-transform:uppercase;letter-spacing:.06em;margin:22px 0 8px}
 /* ---------- Scrolly-Hero ---------- */
-.scrolly{position:relative;height:420svh}
-.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--bg)}
+.scrolly{position:relative;height:420vh;height:420svh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg)}
 .stage video,.sframe{position:absolute;inset:0;width:100%;height:100%}
 .stage video{object-fit:cover;display:none}
 .stage.video-on video{display:block}
@@ -287,7 +287,7 @@ footer small{color:#6f6c5f;font-size:12px}
 .scroll-cue{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:4;color:var(--gold2);font:600 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
 .scroll-cue::after{content:"";width:1px;height:30px;background:linear-gradient(var(--gold),transparent);animation:cue 1.8s infinite}
 @keyframes cue{50%{opacity:.25}}
-@media(prefers-reduced-motion:reduce){.scrolly{height:auto}.stage{position:relative}.sframe:first-of-type{opacity:1}}
+@media(prefers-reduced-motion:reduce){.sframe{transition:none}}
 /* ---------- Mobile-Optimierung ---------- */
 .fab{display:none}
 @media(max-width:900px){
