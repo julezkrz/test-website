@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "name": "Kerstin Kreis Beauty",
+  "baseUrl": "https://kerstinkreis.com",
+  "imageDir": "images",
+  "htmlFiles": [
+    "index.html",
+    "preise.html",
+    "schulungen.html",
+    "impressum.html",
+    "datenschutz.html"
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Startbereich",
+      "hint": "Die vier Bilder, durch die man beim Scrollen ganz oben fährt. Sie erscheinen nur, wenn das Video nicht geladen werden kann.",
+      "slots": [
+        { "id": "hero-1", "label": "Bild 1 – Empfang", "file": "index.html", "ratio": [3, 4], "minWidth": 900 },
+        { "id": "hero-2", "label": "Bild 2 – Handwerk", "file": "index.html", "ratio": [3, 4], "minWidth": 900 },
+        { "id": "hero-3", "label": "Bild 3 – Ergebnis", "file": "index.html", "ratio": [3, 4], "minWidth": 900 },
+        { "id": "hero-4", "label": "Bild 4 – Abschluss", "file": "index.html", "ratio": [3, 4], "minWidth": 900 }
+      ]
+    },
+    {
+      "id": "ueber",
+      "label": "Über mich",
+      "hint": "Dein Porträt. Es wird zusätzlich unscharf als Hintergrund verwendet – beides ändert sich gemeinsam.",
+      "slots": [
+        { "id": "portrait", "label": "Porträtfoto", "file": "index.html", "ratio": [3, 4], "minWidth": 700 }
+      ]
+    },
+    {
+      "id": "leistungen",
+      "label": "Leistungen",
+      "hint": "Die drei Karten auf der Startseite.",
+      "slots": [
+        { "id": "service-naegel", "label": "Nägel", "file": "index.html", "ratio": [4, 3.9], "minWidth": 800 },
+        { "id": "service-wimpern", "label": "Wimpern", "file": "index.html", "ratio": [4, 3.9], "minWidth": 800 },
+        { "id": "service-fuesse", "label": "Füße", "file": "index.html", "ratio": [4, 3.9], "minWidth": 800 }
+      ]
+    },
+    {
+      "id": "schulungen",
+      "label": "Schulungen",
+      "hint": "Die Kurskarten und das Bild beim Einzeltraining.",
+      "slots": [
+        { "id": "kurs-smileline", "label": "Kurs: You make me Smile(line)", "file": "schulungen.html", "ratio": [4, 3.9], "minWidth": 800 },
+        { "id": "kurs-lovely-3d", "label": "Kurs: Lovely 3D French", "file": "schulungen.html", "ratio": [4, 3.9], "minWidth": 800 },
+        { "id": "kurs-especially-3d", "label": "Kurs: Especially 3D", "file": "schulungen.html", "ratio": [4, 3.9], "minWidth": 800 },
+        { "id": "einzeltraining", "label": "Einzeltraining", "file": "schulungen.html", "ratio": [1, 1], "minWidth": 700 }
+      ]
+    }
+  ],
+  "gallery": {
+    "label": "Galerie",
+    "hint": "Deine Arbeiten auf der Startseite. Hier kannst du Bilder hinzufügen, entfernen und die Reihenfolge ändern.",
+    "file": "index.html",
+    "elementId": "gallery-data",
+    "ratio": [3, 3.8],
+    "minWidth": 600
+  }
+}
