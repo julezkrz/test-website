@@ -1,0 +1,67 @@
+name: Deploy zu Hetzner Webhosting
+
+# Laedt die statische Website per FTPS auf den Hetzner-Webspace.
+# Laeuft bei jedem Push auf main und kann in Actions manuell gestartet werden.
+#
+# Benoetigte Secrets (Repo -> Settings -> Secrets and variables -> Actions):
+#   FTP_HOST   Hostname des FTP-Servers aus konsoleH, z. B. wXXXXXXXX.your-hosting.de
+#   FTP_USER   FTP-Benutzername
+#   FTP_PASS   FTP-Passwort
+# Benoetigte Variable (gleiche Seite, Reiter "Variables"):
+#   FTP_REMOTE_DIR  Zielverzeichnis auf dem Server, meist /public_html
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hetzner
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: lftp installieren
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Pflichtangaben pruefen
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+        run: |
+          for v in FTP_HOST FTP_USER FTP_PASS; do
+            if [ -z "${!v}" ]; then echo "Secret $v fehlt."; exit 1; fi
+          done
+
+      - name: Per FTPS hochladen
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
+          REMOTE_DIR: ${{ vars.FTP_REMOTE_DIR || '/public_html' }}
+        run: |
+          lftp -c "
+            set ftp:ssl-force true;
+            set ftp:ssl-protect-data true;
+            set ssl:verify-certificate true;
+            set net:max-retries 3;
+            set net:timeout 20;
+            open -u '$FTP_USER','$FTP_PASS' '$FTP_HOST';
+            mirror --reverse --delete --verbose --parallel=4 \
+              --exclude-glob .git/ \
+              --exclude-glob .github/ \
+              --exclude-glob .gitignore \
+              --exclude-glob .well-known/ \
+              --exclude-glob images/originals/ \
+              --exclude-glob attachments/ \
+              --exclude-glob cms.config.json \
+              --exclude-glob CNAME \
+              --exclude-glob README.md \
+              ./ '$REMOTE_DIR';
+          "

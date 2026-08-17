@@ -9,7 +9,9 @@
 <link rel="canonical" href="https://kerstinkreis.com/datenschutz.html">
 <link rel="icon" type="image/png" href="images/kerstin-kreis-beauty-logo.png">
 <link rel="apple-touch-icon" href="images/kerstin-kreis-beauty-logo.png">
-<script src="consent.js"></script>
+<link rel="preload" href="fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <style>
 :root{--bg:#0b0b0d;--panel:#141417;--line:rgba(233,200,126,.16);--line2:rgba(233,200,126,.34);
 --gold:#d5ab5f;--gold2:#f2d998;--ivory:#f6f3ec;--body:#c9c4b8;--muted:#94907f;
@@ -17,7 +19,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--body);font:400 16.5px/1.75 var(--sans);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
-img[data-consent-src]{display:none}
 ::selection{background:var(--gold);color:#181206}
 .wrap{width:min(860px,92%);margin-inline:auto}
 h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.1;color:var(--ivory);letter-spacing:-.01em;text-transform:uppercase}
@@ -58,7 +59,7 @@ footer small{color:#6f6c5f;font-size:12px}
 
   <h2>1. Verantwortliche Stelle</h2>
   <div class="panel">
-    <p style="margin-bottom:0">Kerstin Kreis Beauty – Nails &amp; Lashes Kerstin Kreis<br>
+    <p style="margin-bottom:0">Kerstin Kreis Beauty – Nägel, Wimpern, Kosmetische Fußpflege<br>
     Inhaberin: Kerstin Kreis<br>
     Günzburger Str. 23, 89340 Leipheim, Deutschland<br>
     Telefon: <a href="tel:+4917632731073">+49 176 32731073</a><br>
@@ -68,14 +69,15 @@ footer small{color:#6f6c5f;font-size:12px}
   <h2>2. Allgemeines</h2>
   <p>Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Diese Website kann grundsätzlich ohne Angabe personenbezogener Daten genutzt werden. Soweit personenbezogene Daten (z.&nbsp;B. Name, Telefonnummer oder E-Mail-Adresse) erhoben werden, erfolgt dies – soweit möglich – stets auf freiwilliger Basis. Ohne Ihre ausdrückliche Einwilligung werden keine Daten an Dritte weitergegeben, soweit keine gesetzliche Verpflichtung besteht.</p>
 
-  <h2>3. Server-Logfiles (Hosting)</h2>
-  <p>Beim Aufruf dieser Website erfasst der Hosting-Anbieter automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Datum und Uhrzeit des Zugriffs sowie IP-Adresse. Diese Daten dienen der Sicherstellung eines störungsfreien Betriebs und der Verbesserung unseres Angebots und werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Darstellung der Website).</p>
+  <h2>3. Hosting und Server-Logfiles</h2>
+  <p>Diese Website wird gehostet von der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland (nachfolgend „Hetzner"). Die eingesetzten Server stehen in Deutschland. Hetzner verarbeitet die beim Betrieb der Website anfallenden Daten ausschließlich in unserem Auftrag und nach unserer Weisung; wir haben hierzu einen Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO abgeschlossen. Eine Übermittlung personenbezogener Daten in Drittländer außerhalb der EU/des EWR findet nicht statt. Weitere Informationen: <a href="https://www.hetzner.com/de/legal/privacy-policy/" target="_blank" rel="noopener">Datenschutzerklärung von Hetzner</a>.</p>
+  <p>Beim Aufruf dieser Website erfasst der Hosting-Anbieter automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Datum und Uhrzeit des Zugriffs sowie IP-Adresse. Diese Daten dienen der Sicherstellung eines störungsfreien und sicheren Betriebs und werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Sicherheit der Website).</p>
 
-  <h2>4. Cookies und lokale Speicherung (Consent-Verwaltung)</h2>
-  <p>Diese Website setzt <strong>keine Tracking- oder Werbe-Cookies</strong> ein. Zur Verwaltung Ihrer Einwilligung in das Nachladen externer Inhalte wird lediglich Ihre Auswahl lokal in Ihrem Browser gespeichert (localStorage, Eintrag „kk-consent"). Diese Speicherung ist technisch erforderlich, um Ihre Entscheidung zu respektieren, und enthält keine personenbezogenen Daten; sie verbleibt ausschließlich auf Ihrem Gerät. Rechtsgrundlage: § 25 Abs. 2 Nr. 2 TDDDG bzw. Art. 6 Abs. 1 lit. f DSGVO. Sie können Ihre Auswahl jederzeit über den Link „Cookie-Einstellungen" im Footer bzw. das Schild-Symbol ändern oder die Daten in Ihrem Browser löschen.</p>
+  <h2>4. Cookies und lokale Speicherung</h2>
+  <p>Diese Website setzt <strong>keine Cookies</strong> ein – weder technisch notwendige noch Analyse-, Tracking- oder Werbe-Cookies. Es werden auch keine Informationen im lokalen Speicher Ihres Browsers (localStorage, sessionStorage) abgelegt. Da keine Dienste eingebunden sind, die eine Einwilligung nach § 25 Abs. 1 TDDDG erfordern, benötigt diese Website auch keinen Einwilligungs-Banner („Cookie-Banner").</p>
 
-  <h2>5. Externe Inhalte (nur nach Einwilligung): Google Fonts</h2>
-  <p>Alle Bilder und Videos dieser Website werden lokal von unserem Webserver ausgeliefert; es findet insoweit keine Datenübertragung an Dritte statt. Als einziger externer Dienst werden zur einheitlichen Darstellung von Schriftarten Web Fonts von Google eingebunden – jedoch <strong>erst, nachdem Sie über den Einwilligungs-Banner zugestimmt haben</strong> (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Erst bei Zustimmung wird eine Verbindung zu den Servern von Google hergestellt; dabei wird technisch bedingt Ihre IP-Adresse übertragen. Ohne Einwilligung wird eine Standardschrift Ihres Systems verwendet. Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>. Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft über die „Cookie-Einstellungen" widerrufen.</p>
+  <h2>5. Keine externen Dienste, Schriften und Medien</h2>
+  <p>Sämtliche Inhalte dieser Website – Texte, Bilder, Videos und Schriftarten – werden ausschließlich lokal von unserem Webserver in Deutschland ausgeliefert. Insbesondere binden wir <strong>keine Google Fonts</strong> und keine anderen externen Schriftdienste ein, ferner kein Content-Delivery-Network (CDN), keine Analyse-, Statistik- oder Tracking-Dienste, keine Werbenetzwerke und keine Social-Media-Plugins. Beim Aufruf dieser Website findet daher <strong>keine Datenübertragung an Dritte</strong> statt; Ihre IP-Adresse wird ausschließlich an unseren Hosting-Anbieter in Deutschland übermittelt (siehe Ziffer 3).</p>
 
   <h2>6. Kontaktaufnahme und Terminanfragen</h2>
   <p>Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren (z.&nbsp;B. für eine Terminanfrage), werden Ihre Angaben (Name, Kontaktdaten, Wunschtermin, Inhalt der Anfrage) zur Bearbeitung der Anfrage und für Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Anbahnung bzw. Durchführung eines Vertrags) sowie Art. 6 Abs. 1 lit. f DSGVO.</p>
@@ -103,13 +105,12 @@ footer small{color:#6f6c5f;font-size:12px}
   <h2>10. Keine automatisierte Entscheidungsfindung</h2>
   <p>Eine automatisierte Entscheidungsfindung oder ein Profiling findet nicht statt.</p>
 
-  <p style="color:var(--muted);font-size:13.5px;margin-top:34px">Stand: Juli 2026</p>
+  <p style="color:var(--muted);font-size:13.5px;margin-top:34px">Stand: August 2026</p>
 </div></main>
 <footer><div class="wrap">
   <div class="foot-links">
     <a href="index.html">Startseite</a>
     <a href="impressum.html">Impressum</a>
-    <a href="#" data-kkc-open>Cookie-Einstellungen</a>
   </div>
   <small>© 2026 Kerstin Kreis Beauty · Günzburger Str. 23 · 89340 Leipheim</small>
 </div></footer>

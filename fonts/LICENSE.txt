@@ -1,0 +1,19 @@
+Schriften in diesem Ordner
+==========================
+
+Outfit
+  outfit-latin.woff2, outfit-latin-ext.woff2
+  Lizenz: SIL Open Font License, Version 1.1
+  Quelle: https://fonts.google.com/specimen/Outfit
+
+Syne
+  syne-latin.woff2, syne-latin-ext.woff2
+  Lizenz: SIL Open Font License, Version 1.1
+  Quelle: https://fonts.google.com/specimen/Syne
+
+Der vollstaendige Lizenztext der SIL Open Font License 1.1 ist abrufbar unter
+https://openfontlicense.org/ bzw. https://scripts.sil.org/OFL
+
+Die OFL erlaubt ausdruecklich das Einbetten und Ausliefern der Schriften ueber
+den eigenen Webserver. Die Dateien wurden von fonts.gstatic.com bezogen
+(Subsets latin und latin-ext) und nicht veraendert.
